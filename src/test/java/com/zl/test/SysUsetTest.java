@@ -1,8 +1,10 @@
 package com.zl.test;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -145,7 +147,6 @@ public class SysUsetTest extends BaseMapperTest {
 		}
 	}
 
-	
 	@Test
 	public void testCommonsMapper() {
 		SqlSession sqlSession = null;
@@ -177,13 +178,75 @@ public class SysUsetTest extends BaseMapperTest {
 			List<SysUser> list = userMapper.selectAll();
 			SysUser selectById = userMapper.selectByPrimaryKey(1L);
 			System.out.println(selectById);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
+	}
 
+	@Test
+	public void testSelectByIdList() {
+		SqlSession sqlSession = null;
+		try {
+			sqlSession = getSqlSession();
+			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+			List<Long> list = new ArrayList<>();
+			list.add(1L);
+			list.add(1001L);
+			List<SysUser> userList = userMapper.selectByIdList(list);
+			System.out.println("结果" + userList);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+	}
+
+	@Test
+	public void testInsertList() {
+		SqlSession sqlSession = null;
+		try {
+			sqlSession = getSqlSession();
+			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+			List<SysUser> list = new ArrayList<>();
+			for (int i = 0; i < 2; i++) {
+				SysUser sysUser = new SysUser();
+				sysUser.setUserName("张磊");
+				sysUser.setUserPassword("1120");
+				sysUser.setUserEmail("1120@zl.com");
+				sysUser.setUserInfo("zl");
+				list.add(sysUser);
+			}
+			int i = userMapper.insertList(list);
+			sqlSession.commit();
+			System.out.println("结果：" + i);
+			System.out.println("id" + list.get(0).getId());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+	}
+
+	@Test
+	public void testUpdateByMap() {
+		SqlSession sqlSession = null;
+		try {
+			sqlSession = getSqlSession();
+			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+			Map<String, Object> map = new HashMap<>();
+			map.put("id", 1048L);
+			map.put("user_name", "张磊");
+			int i = userMapper.updateByMap(map);
+			SysUser sysUser = userMapper.selectById(1048L);
+			System.out.println(sysUser);
+			sqlSession.commit();
+		} finally {
+			sqlSession.close();
+		}
 	}
 
 }

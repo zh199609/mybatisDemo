@@ -10,7 +10,7 @@ import com.zl.entity.SysUser;
 
 import tk.mybatis.mapper.common.Mapper;
 
-public interface UserMapper extends Mapper<SysUser>{
+public interface UserMapper extends Mapper<SysUser> {
 
 	/**
 	 * 
@@ -45,20 +45,41 @@ public interface UserMapper extends Mapper<SysUser>{
 
 	List<SysRole> selectRolesByUserIdAndRoleEnabled(@Param("userId") Long userId, @Param("enabled") Integer emabled);
 
-	
 	List<SysUser> selectByUser(SysUser sysUser);
 
 	/**
 	 * 
-	 * @Title: selectByIdOrUserName   
-	 * @Description:    根据id或者用户名查询
+	 * @Title: selectByIdOrUserName
+	 * @Description: 根据id或者用户名查询
 	 * @param sysUser
 	 * @return
 	 */
 	SysUser selectByIdOrUserName(SysUser sysUser);
-	
-	
-	
+
+	/**
+	 * Map參數測試
+	 * @param map
+	 * @return
+	 */
 	List<SysUser> selectByMap(Map<Object, Object> map);
+	
+	
+	/**
+	 * @Description: 根据用户id集合查询
+	 * @param map
+	 * @return
+	 */
+	List<SysUser> selectByIdList(@Param("idList")List<Long> idList);
+	
+	
+	/**
+	 *  批量插入用户信息
+	 * @param userList
+	 * @return
+	 */
+	int insertList(List<SysUser> userList);
+	
+	
+	int updateByMap(Map<String, Object> map);
 
 }
