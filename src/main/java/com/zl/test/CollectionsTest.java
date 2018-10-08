@@ -38,5 +38,9 @@ public class CollectionsTest {
 		System.out.println(a);
 	}
 	
+	public void zhanglei() {
+		
+	}
+	
 	
 }
