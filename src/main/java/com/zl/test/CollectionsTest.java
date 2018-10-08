@@ -39,8 +39,10 @@ public class CollectionsTest {
 	}
 	
 	public void zhanglei() {
-		
+		System.out.println("张磊");
 	}
-	
+	public void zhaoyuting() {
+	    
+	}
 	
 }
