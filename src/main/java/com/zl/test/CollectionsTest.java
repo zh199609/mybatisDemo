@@ -32,7 +32,7 @@ public class CollectionsTest {
 	public void test() {
 		int a = 8<<1;
 		//1000000000
-		//ÐÂÌØÐÔ
+		String reg = "^[1-9]\\d{16}[0-9Xx]$";
 		System.out.println(a);
 	}
 	
