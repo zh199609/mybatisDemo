@@ -28,7 +28,7 @@ public class CollectionsTest {
 	}
 	
 	
-	//≤‚ ‘
+	
 	public void test() {
 		int a = 8<<1;
 		//1000000000
