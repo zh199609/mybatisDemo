@@ -33,6 +33,8 @@ public class CollectionsTest {
 		int a = 8<<1;
 		//1000000000
 		String reg = "^[1-9]\\d{16}[0-9Xx]$";
+
+		//新增
 		System.out.println(a);
 	}
 	
