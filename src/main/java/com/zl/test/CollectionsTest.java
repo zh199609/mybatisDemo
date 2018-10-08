@@ -41,6 +41,8 @@ public class CollectionsTest {
 	public void zhanglei() {
 		
 	}
-	
+	public void zhaoyuting() {
+	    
+	}
 	
 }
