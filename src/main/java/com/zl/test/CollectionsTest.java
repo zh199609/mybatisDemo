@@ -42,7 +42,7 @@ public class CollectionsTest {
 		System.out.println("张磊");
 	}
 	public void zhaoyuting() {
-	    System.out.println("大学赵玉婷");
+	    System.out.println("大学赵玉婷呵呵");
 	    System.out.println("高中赵玉婷");
 	}
 	
