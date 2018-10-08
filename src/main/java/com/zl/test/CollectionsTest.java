@@ -43,7 +43,7 @@ public class CollectionsTest {
 	}
 	public void zhaoyuting() {
 	    System.out.println("大学赵玉婷");
-	    System.out.println("高中赵玉婷");
+	    System.out.println("高中赵玉婷可爱");
 	}
 	
 }
