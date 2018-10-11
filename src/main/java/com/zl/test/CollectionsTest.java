@@ -43,6 +43,8 @@ public class CollectionsTest {
 	}
 	public void zhaoyuting() {
 		System.out.println("新增打印！");
+
+		System.out.println("1号新增");
 	}
 	
 }
