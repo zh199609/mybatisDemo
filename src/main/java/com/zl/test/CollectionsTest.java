@@ -46,6 +46,7 @@ public class CollectionsTest {
 	    System.out.println("大学赵玉婷呵呵");
 	    System.out.println("高中赵玉婷可爱");
 	    System.out.println("爱");
+	    System.out.println("我提交了……嘿嘿");
 	}
 	
 }
