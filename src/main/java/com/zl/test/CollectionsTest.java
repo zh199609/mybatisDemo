@@ -42,7 +42,7 @@ public class CollectionsTest {
 		System.out.println("张磊");
 	}
 	public void zhaoyuting() {
-		
+		System.out.println("1号新增");
 	}
 	
 }
