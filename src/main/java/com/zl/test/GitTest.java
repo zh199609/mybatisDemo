@@ -1,5 +1,5 @@
 package com.zl.test;
 
-public class GitTest {
-	
+public interface GitTest {
+	void m1();
 }
