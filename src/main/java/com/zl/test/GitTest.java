@@ -2,5 +2,6 @@ package com.zl.test;
 
 public interface GitTest {
 	void m1();
+	void m2();
 	void m3();
 }
