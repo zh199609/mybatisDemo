@@ -5,4 +5,5 @@ public interface GitTest {
 	void spring();
 	void boot();
 	void boot1();
+	void boot2();
 }
