@@ -7,4 +7,5 @@ public interface GitTest {
 	void boot1();
 	void boot2();
 	void boot3();
+	void boot4();
 }
