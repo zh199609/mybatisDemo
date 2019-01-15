@@ -65,7 +65,6 @@ public class SysUsetTest extends BaseMapperTest {
 			sysUser.setUserEmail("1120@qq.com");
 			sysUser.setUserInfo("info");
 			sysUser.setHeadImg(new byte[] { 1, 2, 3 });
-			sysUser.setCreateTime(new Date());
 			int rs = userMapper.insert2(sysUser);
 			System.out.println("返回执行sql影响的行数:" + rs);
 			System.out.println("返回的主键:" + sysUser.getId());

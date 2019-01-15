@@ -32,9 +32,9 @@
 
 	<mappers>
 		<!-- <package name="com.zl.mapper"/> -->
-		<mapper resource="com/zl/mapper/PrivilegeMapper.xml" />
-		<mapper resource="com/zl/mapper/RoleMapper.xml" />
-		<mapper resource="com/zl/mapper/RolePrivilegeMapper.xml" />
+		<!--<mapper resource="com/zl/mapper/PrivilegeMapper.xml" />-->
+		<!--<mapper resource="com/zl/mapper/RoleMapper.xml" />-->
+		<!--<mapper resource="com/zl/mapper/RolePrivilegeMapper.xml" />-->
 		<mapper resource="com/zl/mapper/UserMapper.xml" />
 		<mapper resource="com/zl/mapper/UserRoleMapper.xml" />
 	</mappers>

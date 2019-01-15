@@ -15,6 +15,7 @@ logs/
 # idea
 .idea/
 *.iml
+/bin/
 
 *velocity.log*
 
