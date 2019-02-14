@@ -3,6 +3,22 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zl.mapper.RoleMapper">
+    <resultMap id="roleResultMap" type="SysRole">
+        <result typeHandler="com.zl.config.EnableTypeHandler" column="enabled" javaType="com.zl.config.Enabled"
+                jdbcType="NUMERIC" property="enabled"></result>
+    </resultMap>
 
+    <select id="selectById" resultMap="roleResultMap">
+      select * from sys_role where id = #{id}
+    </select>
 
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+       insert
+		into sys_role(
+		  role_name,enabled,create_by,create_time
+		)
+		values(
+		  #{roleName},#{enabled,typeHandler=com.zl.config.EnableTypeHandler},#{createBy},#{createTime}
+		)
+    </insert>
 </mapper>

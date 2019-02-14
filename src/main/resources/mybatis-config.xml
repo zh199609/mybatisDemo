@@ -5,38 +5,42 @@
 <configuration>
 
 
+    <settings>
+        <!--开启驼峰命名 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="LOG4J2"/>
+    </settings>
 
-	<settings>
-		<!--开启驼峰命名 -->
-		<setting name="mapUnderscoreToCamelCase" value="true" />
-		<setting name="logImpl" value="LOG4J2" />
-	</settings>
 
+    <typeAliases>
+        <package name="com.zl.entity"/>
+    </typeAliases>
 
-	<typeAliases>
-		<package name="com.zl.entity" />
-	</typeAliases>
+    <!--<typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+                     javaType="com.zl.config.Enabled"></typeHandler>
+    </typeHandlers>-->
 
-	<environments default="development">
-		<environment id="development">
-			<transactionManager type="JDBC" />
-			<dataSource type="UNPOOLED">
-				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url"
-					value="jdbc:mysql://119.29.238.123:3306/mybatisDemo?seUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=UTC" />
-				<property name="username" value="root" />
-				<property name="password" value="zh199609" />
-			</dataSource>
-		</environment>
-	</environments>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://119.29.238.123:3306/mybatisDemo?seUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="zh199609"/>
+            </dataSource>
+        </environment>
+    </environments>
 
-	<mappers>
-		<!-- <package name="com.zl.mapper"/> -->
-		<!--<mapper resource="com/zl/mapper/PrivilegeMapper.xml" />-->
-		<!--<mapper resource="com/zl/mapper/RoleMapper.xml" />-->
-		<!--<mapper resource="com/zl/mapper/RolePrivilegeMapper.xml" />-->
-		<mapper resource="com/zl/mapper/UserMapper.xml" />
-		<mapper resource="com/zl/mapper/UserRoleMapper.xml" />
-	</mappers>
+    <mappers>
+        <package name="com.zl.mapper"/>
+        <!--<mapper resource="com/zl/mapper/PrivilegeMapper.xml" />
+        <mapper resource="com/zl/mapper/RoleMapper.xml" />
+        <mapper resource="com/zl/mapper/RolePrivilegeMapper.xml" />-->
+        <!--<mapper resource="com/zl/mapper/UserMapper.xml" />-->
+        <!--<mapper resource="com/zl/mapper/UserRoleMapper.xml" />-->
+    </mappers>
 
 </configuration>

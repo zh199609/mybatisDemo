@@ -1,79 +1,80 @@
 package com.zl.entity;
 /**
- * 
  * @Description:角色
  * @author i-leizh
- * @date:  2018年9月27日 下午3:01:39
+ * @date: 2018年9月27日 下午3:01:39
  */
 
+import com.zl.config.Enabled;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class SysRole {
 
-	private Long id;
+    private Long id;
 
-	private String roleName;
+    private String roleName;
 
-	private Integer enabled;
+    private Enabled enabled;
 
-	private Long createBy;
+    private Long createBy;
 
-	private Date createTime;
-	
-	private SysUser sysUser;
+    private LocalDateTime createTime;
 
-	public SysUser getSysUser() {
-		return sysUser;
-	}
+    private SysUser sysUser;
 
-	public void setSysUser(SysUser sysUser) {
-		this.sysUser = sysUser;
-	}
+    public SysUser getSysUser() {
+        return sysUser;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public void setSysUser(SysUser sysUser) {
+        this.sysUser = sysUser;
+    }
 
-	@Override
-	public String toString() {
-		return "SysRole [id=" + id + ", roleName=" + roleName + ", enabled=" + enabled + ", createBy=" + createBy
-				+ ", createTime=" + createTime + ", sysUser=" + sysUser + "]";
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @Override
+    public String toString() {
+        return "SysRole [id=" + id + ", roleName=" + roleName + ", enabled=" + enabled + ", createBy=" + createBy
+                + ", createTime=" + createTime + ", sysUser=" + sysUser + "]";
+    }
 
-	public String getRoleName() {
-		return roleName;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
+    public String getRoleName() {
+        return roleName;
+    }
 
-	public Integer getEnabled() {
-		return enabled;
-	}
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 
-	public void setEnabled(Integer enabled) {
-		this.enabled = enabled;
-	}
+    public Long getCreateBy() {
+        return createBy;
+    }
 
-	public Long getCreateBy() {
-		return createBy;
-	}
+    public void setCreateBy(Long createBy) {
+        this.createBy = createBy;
+    }
 
-	public void setCreateBy(Long createBy) {
-		this.createBy = createBy;
-	}
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public Enabled getEnabled() {
+        return enabled;
+    }
 
+    public void setEnabled(Enabled enabled) {
+        this.enabled = enabled;
+    }
 }

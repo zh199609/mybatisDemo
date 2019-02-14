@@ -3,112 +3,109 @@ package com.zl.entity;
  * 用户表
  */
 
+import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Date;
 
-import javax.persistence.Id;
-
 public class SysUser {
-	
-	
-	@Override
-	public String toString() {
-		return "SysUser [id=" + id + ", userName=" + userName + ", userPassword=" + userPassword + ", userEmail="
-				+ userEmail + ", userInfo=" + userInfo + ", headImg=" + Arrays.toString(headImg) + ", createTime="
-				+ createTime + "]";
-	}
 
-	@Id
-	private Long id;
-	
-	private String userName;
-	
-	private String userPassword;
-	
-	private String userEmail;
-	
-	private String userInfo;
-	
-	/*
-	 * 头像
-	 */
-	private byte[] headImg;
-	
-	private Date createTime;
 
-	public SysUser(Long id, String userName, String userPassword, String userEmail, String userInfo, byte[] headImg,
-			Date createTime) {
-		super();
-		this.id = id;
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userEmail = userEmail;
-		this.userInfo = userInfo;
-		this.headImg = headImg;
-		this.createTime = createTime;
-	}
+    @Override
+    public String toString() {
+        return "SysUser [id=" + id + ", userName=" + userName + ", userPassword=" + userPassword + ", userEmail="
+                + userEmail + ", userInfo=" + userInfo + ", headImg=" + Arrays.toString(headImg) + ", createTime="
+                + createTime + "]";
+    }
+    //@Id
+    private Long id;
 
-	public SysUser() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    private String userName;
 
-	public Long getId() {
-		return id;
-	}
+    private String userPassword;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    private String userEmail;
 
-	public String getUserName() {
-		return userName;
-	}
+    private String userInfo;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    /*
+     * 头像
+     */
+    private byte[] headImg;
 
-	public String getUserPassword() {
-		return userPassword;
-	}
+    private Date createTime;
 
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
-	}
+    public SysUser(Long id, String userName, String userPassword, String userEmail, String userInfo, byte[] headImg,
+                   Date createTime) {
+        super();
+        this.id = id;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userInfo = userInfo;
+        this.headImg = headImg;
+        this.createTime = createTime;
+    }
 
-	public String getUserEmail() {
-		return userEmail;
-	}
+    public SysUser() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getUserInfo() {
-		return userInfo;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setUserInfo(String userInfo) {
-		this.userInfo = userInfo;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public byte[] getHeadImg() {
-		return headImg;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setHeadImg(byte[] headImg) {
-		this.headImg = headImg;
-	}
+    public String getUserPassword() {
+        return userPassword;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-	
-	
-	
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public String getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(String userInfo) {
+        this.userInfo = userInfo;
+    }
+
+    public byte[] getHeadImg() {
+        return headImg;
+    }
+
+    public void setHeadImg(byte[] headImg) {
+        this.headImg = headImg;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+
 }
