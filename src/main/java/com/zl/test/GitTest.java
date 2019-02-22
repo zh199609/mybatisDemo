@@ -5,4 +5,5 @@ public interface GitTest {
 	void boot3();
 	void boot4();
 	void master();
+	void master111();
 }
